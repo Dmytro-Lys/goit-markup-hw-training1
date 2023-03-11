@@ -180,7 +180,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 160px;
+  /* column-gap: 160px; */
+  column-gap: calc(100vw - 160px);
+}
+@media screen and (min-width: 480px) {
+  .hero-container {
+    column-gap: 320px;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero-container {
@@ -239,7 +245,6 @@ button {
 
 .hero-badge {
   width: 46px;
-  /* margin-left: 20px; */
   font-weight: 400;
   font-size: 14px;
   line-height: calc(17 / 14);
@@ -247,7 +252,6 @@ button {
 @media screen and (min-width: 768px) {
   .hero-badge {
     width: 76px;
-    /* margin-left: 49px; */
     font-size: 24px;
     line-height: calc(29 / 24);
   }
@@ -255,7 +259,6 @@ button {
 @media screen and (min-width: 1280px) {
   .hero-badge {
     width: 102px;
-    /* margin-left: 210px; */
     font-size: 32px;
     line-height: calc(39 / 32);
     --shift-from-x: 0;
