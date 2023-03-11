@@ -18,7 +18,7 @@
     <title>Anemone</title>
   </head>
   <body class="body">
-    <header class="header">
+    <!-- <header class="header">
       <div class="header-container">
         <a class="header-logo" href="#">
           <svg width="72" height="58">
@@ -40,16 +40,39 @@
           </button>
         </a>
       </div>
-    </header>
+    </header> -->
     <main>
       <!-- Hero section -->
       <section class="hero">
         <div class="hero-container">
           <h1 class="hero-title">ANEMONE</h1>
-          <p class="hero-badge">flower studio</p>
+          <h2 class="hero-badge">flower studio</h2>
           <button class="hero-btn" type="button">
-            <svg class="hero-btn-icon">
-              <use class="hero-btn-txt" href="./images/icons.svg#btn-txt"></use>
+            <svg class="hero-btn-icon-mob">
+              <use
+                class="hero-btn-txt"
+                href="./images/icons.svg#btn-txt-mob"
+              ></use>
+              <use
+                class="hero-btn-arrow"
+                href="./images/icons.svg#btn-arrow"
+              ></use>
+            </svg>
+            <svg class="hero-btn-icon-tab">
+              <use
+                class="hero-btn-txt"
+                href="./images/icons.svg#btn-txt-tab"
+              ></use>
+              <use
+                class="hero-btn-arrow"
+                href="./images/icons.svg#btn-arrow"
+              ></use>
+            </svg>
+            <svg class="hero-btn-icon-desk">
+              <use
+                class="hero-btn-txt"
+                href="./images/icons.svg#btn-txt-desk"
+              ></use>
               <use
                 class="hero-btn-arrow"
                 href="./images/icons.svg#btn-arrow"
@@ -58,11 +81,67 @@
           </button>
         </div>
         <div class="hero-shape">
-          <img
+          <picture>
+            <source
+              media="(min-width: 1280px)"
+              srcset="
+                ./images/index/hero/img_hero_desk@1x.webp 1x,
+                ./images/index/hero/img_hero_desk@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 1280px)"
+              srcset="
+                ./images/index/hero/img_hero_desk@1x.jpg 1x,
+                ./images/index/hero/img_hero_desk@2x.jpg 2x
+              "
+              type="image/jpeg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./images/index/hero/img_hero_tab@1x.webp 1x,
+                ./images/index/hero/img_hero_tab@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./images/index/hero/img_hero_tab@1x.png 1x,
+                ./images/index/hero/img_hero_tab@2x.png 2x
+              "
+              type="image/png"
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                ./images/index/hero/img_hero_mob@1x.webp 1x,
+                ./images/index/hero/img_hero_mob@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                ./images/index/hero/img_hero_mob@1x.png 1x,
+                ./images/index/hero/img_hero_mob@2x.png 2x
+              "
+              type="image/png"
+            />
+            <img
+              class="hero-img"
+              src="./images/index/hero/img_hero_mob@1x.png"
+              alt="Flower studio preview"
+              loading="lazy"
+            />
+          </picture>
+          <!-- <img
             class="hero-img"
             src="./images/index/hero/img_hero_desk@1x.jpg"
             alt="Flower studio preview"
-          />
+          /> -->
         </div>
       </section>
     </main>
@@ -70,11 +149,11 @@
       <div class="container flex-footer">
         <div class="footer-text">
           <!--Logo-->
-          <a class="header-logo" href="#">
+          <!-- <a class="header-logo" href="#">
             <svg width="72" height="58">
               <use href="./images/icons.svg#logo"></use>
             </svg>
-          </a>
+          </a> -->
         </div>
       </div>
     </footer>
