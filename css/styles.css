@@ -267,9 +267,8 @@ button {
     animation: move-vertical 1000ms ease-out 1000ms both;
   }
 }
-.hero-btn {
-}
 
+/* hero button */
 @media screen and (min-width: 1280px) {
   .hero-btn {
     --shift-from-x: 0;
@@ -278,9 +277,25 @@ button {
     animation: move-vertical 1000ms ease-out 1000ms both;
   }
 }
-.hero-btn-icon-mob {
+.hero-btn-icon {
   width: 76px;
   height: 76px;
+}
+@media screen and (min-width: 768px) {
+  .hero-btn-icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-btn-icon {
+    width: 166px;
+    height: 166px;
+  }
+}
+/* adaptive button icons */
+.hero-btn-icon-mob {
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .hero-btn-icon-mob {
@@ -294,20 +309,17 @@ button {
 @media screen and (min-width: 768px) {
   .hero-btn-icon-tab {
     display: block;
-    width: 150px;
-    height: 150px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero-btn-icon-desk {
     display: block;
-    width: 166px;
-    height: 166px;
   }
   .hero-btn-icon-tab {
     display: none;
   }
 }
+/* button animation */
 .hero-btn-txt {
   transform-origin: center;
   animation: infinity-rotate 30s linear 250ms infinite;
@@ -330,6 +342,7 @@ button {
 .hero-btn:focus [class="hero-btn-arrow"] {
   transform: rotate(-122deg);
 }
+/* hero img */
 .hero-shape {
   position: absolute;
   top: 95px;
@@ -337,7 +350,6 @@ button {
   transform: translateX(-50%);
   width: 145px;
   height: 274px;
-  /* height: 100%; */
 }
 @media screen and (min-width: 768px) {
   .hero-shape {
@@ -351,7 +363,6 @@ button {
     top: 0;
     width: 1280px;
     height: 878px;
-
     animation: scale-up-center 1000ms ease-out 1000ms both;
   }
 }
