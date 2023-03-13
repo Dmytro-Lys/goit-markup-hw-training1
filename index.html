@@ -159,7 +159,7 @@
           before you make an order please fill in your contact details. We will
           call you back.
         </p>
-        <form class="modal-form" name="modal_form">
+        <form class="modal-form" name="modal_form" data-modal-form>
           <!-- user name -->
 
           <div class="modal-form-group modal-form-group-user">
@@ -169,12 +169,13 @@
               id="user_name"
               class="modal-input"
               placeholder="Your name"
-              minlength="5"
-              maxlength="41"
-              pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-              title="Username must be two words separated by space."
+              minlength="3"
+              maxlength="25"
+              pattern="[A-Za-z]{3,25}"
               required
+              data-modal-input
             />
+            <!-- pattern="^[a-zA-Z]+\s[a-zA-Z]+$" -->
             <svg class="modal-icon">
               <use
                 class="modal-icon-valid"
@@ -200,6 +201,7 @@
               maxlength="25"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
+              data-modal-input
             />
             <svg class="modal-icon">
               <use
@@ -213,7 +215,14 @@
             </svg>
             <label class="modal-form-label" for="modal_mail">Email</label>
           </div>
-          <button class="modal-subm-btn" type="submit">Send</button>
+          <button
+            class="modal-subm-btn"
+            type="submit"
+            disabled
+            data-modal-subm-btn
+          >
+            Send
+          </button>
         </form>
       </div>
     </div>
@@ -310,6 +319,7 @@
       </ul>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/modal-validation.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

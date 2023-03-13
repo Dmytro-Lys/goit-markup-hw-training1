@@ -619,9 +619,7 @@ button {
   min-width: 272px;
   max-height: 357px;
   padding: 28px 16px;
-
   transform: translate(-50%, -50%);
-
   background-color: white;
   transition: transform var(--trans-hv);
 }
