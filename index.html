@@ -146,28 +146,32 @@
       </div>
     </footer>
     <!-- modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop-modal is-hidden" data-modal>
       <div class="modal-send">
-        <button class="modal-btn flex-center" type="button" data-modal-close>
-          <svg class="modal-icon-close">
+        <button
+          class="modal-send-btn flex-center"
+          type="button"
+          data-modal-close
+        >
+          <svg class="modal-send-icon-close">
             <use href="./images/icons.svg#icon-cross"></use>
           </svg>
         </button>
-        <h2 class="modal-title">Contact us</h2>
-        <p class="modal-text">
+        <h2 class="modal-send-title">Contact us</h2>
+        <p class="modal-send-text">
           If you have any additional questions or you want to clarify something
           before you make an order please fill in your contact details. We will
           call you back.
         </p>
-        <form class="modal-form" name="modal_form" data-modal-form>
+        <form class="modal-send-form" name="modal_send_form" data-modal-form>
           <!-- user name -->
 
-          <div class="modal-form-group modal-form-group-user">
+          <div class="modal-send-form-group modal-send-form-group-user">
             <input
               type="text"
               name="user_name"
               id="user_name"
-              class="modal-input"
+              class="modal-send-input"
               placeholder="Your name"
               minlength="3"
               maxlength="25"
@@ -176,26 +180,26 @@
               data-modal-input
             />
             <!-- pattern="^[a-zA-Z]+\s[a-zA-Z]+$" -->
-            <svg class="modal-icon">
+            <svg class="modal-send-icon">
               <use
-                class="modal-icon-valid"
+                class="modal-send-icon-valid"
                 href="./images/icons.svg#sucess-logo"
               ></use>
               <use
-                class="modal-icon-invalid"
+                class="modal-send-icon-invalid"
                 href="./images/icons.svg#error-logo"
               ></use>
             </svg>
-            <label class="modal-form-label" for="user_name">Name</label>
+            <label class="modal-send-form-label" for="user_name">Name</label>
           </div>
           <!-- email -->
 
-          <div class="modal-form-group modal-form-group-mail">
+          <div class="modal-send-form-group modal-send-form-group-mail">
             <input
               type="email"
               name="user_mail"
               id="modal_mail"
-              class="modal-input"
+              class="modal-send-input"
               placeholder="Your email"
               minlength="6"
               maxlength="25"
@@ -203,20 +207,20 @@
               required
               data-modal-input
             />
-            <svg class="modal-icon">
+            <svg class="modal-send-icon">
               <use
-                class="modal-icon-valid"
+                class="modal-send-icon-valid"
                 href="./images/icons.svg#sucess-logo"
               ></use>
               <use
-                class="modal-icon-invalid"
+                class="modal-send-icon-invalid"
                 href="./images/icons.svg#error-logo"
               ></use>
             </svg>
-            <label class="modal-form-label" for="modal_mail">Email</label>
+            <label class="modal-send-form-label" for="modal_mail">Email</label>
           </div>
           <button
-            class="modal-subm-btn"
+            class="modal-send-subm-btn"
             type="submit"
             disabled
             data-modal-subm-btn

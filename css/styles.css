@@ -593,7 +593,7 @@ button {
   fill: currentColor;
 }
 /* modal */
-.backdrop {
+.backdrop-modal {
   background-color: rgba(0, 0, 0, 0.3);
   width: 100vw;
   height: 100vh;
@@ -604,7 +604,7 @@ button {
 
   transition: opacity var(--trans-hv), visibility var(--trans-hv);
 }
-.backdrop.is-hidden {
+.backdrop-modal.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -635,7 +635,7 @@ button {
   }
 }
 
-.modal-btn {
+.modal-send-btn {
   position: absolute;
   display: block;
   top: 19px;
@@ -647,24 +647,20 @@ button {
   padding: 0;
 }
 @media screen and (min-width: 768px) {
-  .modal-btn {
+  .modal-send-btn {
     top: 28px;
     right: 28px;
     width: 16px;
     height: 16px;
   }
 }
-/* .modal-btn:hover,
-.modal-btn:focus {
-  color: var(--col-white);
-  background-color: var(--col-ocean);
-} */
-.modal-icon-close {
+
+.modal-send-icon-close {
   width: 100%;
   height: 100%;
 }
 
-.modal-title {
+.modal-send-title {
   display: block;
   margin-bottom: 14px;
   font-weight: 600;
@@ -672,45 +668,45 @@ button {
   line-height: calc(24 / 20);
 }
 @media screen and (min-width: 768px) {
-  .modal-title {
+  .modal-send-title {
     margin-bottom: 24px;
     font-size: 32px;
     line-height: calc(39 / 32);
   }
 }
-.modal-text {
+.modal-send-text {
   color: var(--mw-text-cl);
   font-weight: 500;
   font-size: 12px;
   line-height: calc(15 / 12);
 }
 @media screen and (min-width: 768px) {
-  .modal-text {
+  .modal-send-text {
     font-size: 16px;
     line-height: calc(20 / 16);
   }
 }
-.modal-form {
+.modal-send-form {
   padding-top: 38px;
   --input-height: 35px;
 }
 @media screen and (min-width: 768px) {
-  .modal-form {
+  .modal-send-form {
     padding-top: 57px;
     --input-height: 49px;
   }
 }
-.modal-form-group {
+.modal-send-form-group {
   position: relative;
   --label-cl: var(--label-text-cl);
 }
-.modal-form-group-user {
+.modal-send-form-group-user {
   margin-bottom: var(--input-height);
 }
-.modal-form-group-mail {
+.modal-send-form-group-mail {
   margin-bottom: calc(var(--input-height) - 11px);
 }
-.modal-icon {
+.modal-send-icon {
   position: absolute;
   top: 50%;
   right: 16px;
@@ -719,12 +715,12 @@ button {
   height: 20px;
   pointer-events: none;
 }
-.modal-icon-invalid,
-.modal-icon-valid {
+.modal-send-icon-invalid,
+.modal-send-icon-valid {
   display: none;
 }
 
-.modal-input {
+.modal-send-input {
   display: block;
   width: 100%;
   min-width: 240px;
@@ -739,15 +735,15 @@ button {
   font-size: 10px;
   line-height: calc(12 / 10);
 }
-.modal-input:placeholder-shown ~ .modal-form-label {
+.modal-send-input:placeholder-shown ~ .modal-send-form-label {
   color: var(--label-text-cl);
 }
-.modal-input:focus:placeholder-shown,
-.modal-input:focus-visible:placeholder-shown {
+.modal-send-input:focus:placeholder-shown,
+.modal-send-input:focus-visible:placeholder-shown {
   border: 1px solid var(--label-text-cl);
 }
 @media screen and (min-width: 768px) {
-  .modal-input {
+  .modal-send-input {
     max-width: 416px;
     padding: 16px 36px 16px 16px;
     font-size: 14px;
@@ -755,50 +751,52 @@ button {
   }
 }
 
-.modal-input::placeholder {
+.modal-send-input::placeholder {
   font-weight: 500;
   font-size: 12px;
   line-height: calc(15 / 12);
 }
 @media screen and (min-width: 768px) {
-  .modal-input::placeholder {
+  .modal-send-input::placeholder {
     font-size: 14px;
     line-height: calc(17 / 14);
   }
 }
-.modal-input:not(:placeholder-shown):required:valid {
+.modal-send-input:not(:placeholder-shown):required:valid {
   border-color: var(--input-valid-cl);
 }
-.modal-input:not(:placeholder-shown):required:valid ~ .modal-form-label {
+.modal-send-input:not(:placeholder-shown):required:valid
+  ~ .modal-send-form-label {
   color: var(--input-valid-cl);
 }
-.modal-input:not(:placeholder-shown):required:valid
-  + .modal-icon
-  > .modal-icon-valid {
+.modal-send-input:not(:placeholder-shown):required:valid
+  + .modal-send-icon
+  > .modal-send-icon-valid {
   display: block;
 }
-.modal-input:not(:placeholder-shown):required:valid
-  + .modal-icon
-  > .modal-icon-invalid {
+.modal-send-input:not(:placeholder-shown):required:valid
+  + .modal-send-icon
+  > .modal-send-icon-invalid {
   display: none;
 }
-.modal-input:not(:placeholder-shown):required:invalid {
+.modal-send-input:not(:placeholder-shown):required:invalid {
   border-color: var(--input-invalid-cl);
 }
-.modal-input:not(:placeholder-shown):required:invalid ~ .modal-form-label {
+.modal-send-input:not(:placeholder-shown):required:invalid
+  ~ .modal-send-form-label {
   color: var(--input-invalid-cl);
 }
-.modal-input:not(:placeholder-shown):required:invalid
-  + .modal-icon
-  > .modal-icon-invalid {
+.modal-send-input:not(:placeholder-shown):required:invalid
+  + .modal-send-icon
+  > .modal-send-icon-invalid {
   display: block;
 }
-.modal-input:not(:placeholder-shown):required:invalid
-  + .modal-icon
-  > .modal-icon-valid {
+.modal-send-input:not(:placeholder-shown):required:invalid
+  + .modal-send-icon
+  > .modal-send-icon-valid {
   display: none;
 }
-.modal-form-label {
+.modal-send-form-label {
   display: block;
   position: absolute;
   top: 0;
@@ -810,13 +808,13 @@ button {
   line-height: calc(12 / 10);
 }
 @media screen and (min-width: 768px) {
-  .modal-form-label {
+  .modal-send-form-label {
     transform: translateY(-25px);
     font-size: 14px;
     line-height: calc(17 / 14);
   }
 }
-.modal-subm-btn {
+.modal-send-subm-btn {
   display: block;
   width: 100%;
   min-width: 240px;
@@ -835,11 +833,11 @@ button {
   cursor: pointer;
   /* transition: background-color var(--trans-hv); */
 }
-.modal-subm-btn:disabled {
+.modal-send-subm-btn:disabled {
   background-color: var(--def-btn-send-cl);
 }
 @media screen and (min-width: 768px) {
-  .modal-subm-btn {
+  .modal-send-subm-btn {
     max-width: 416px;
     height: 50px;
     font-size: 18px;
