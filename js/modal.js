@@ -20,13 +20,13 @@
     function toggleModal() {
       refs.modal.classList.toggle('is-hidden');
   };
-
-  refs.modalSndFrm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    refs.modalSnd.classList.toggle('is-hidden');
-    refs.modalThnks.classList.toggle('is-hidden'); 
-  });
-  
+  if (refs.modalSndFrm !== null) {
+    refs.modalSndFrm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      refs.modalSnd.classList.toggle('is-hidden');
+      refs.modalThnks.classList.toggle('is-hidden');
+    });
+  }
   var closeModalThnksBtn = document.querySelectorAll("[data-modal-thnx-close]");
     for (var i = 0; i < closeModalThnksBtn.length; i++) {
      closeModalThnksBtn[i].addEventListener('click', toggleModalThnks);
@@ -35,10 +35,12 @@
   function toggleModalThnks() {
      refs.modalSndFrm.submit();
   }
-  
-  refs.openModalSbscrBtn.addEventListener('click', toggleModalSbscr);
-  refs.closeModalSbscrBtn.addEventListener('click', toggleModalSbscr);
-
+  if (refs.openModalSbscrBtn !== null) {
+    refs.openModalSbscrBtn.addEventListener('click', toggleModalSbscr);
+  }
+  if (refs.closeModalSbscrBtn !== null) {
+    refs.closeModalSbscrBtn.addEventListener('click', toggleModalSbscr);
+  }
   function toggleModalSbscr() {
       refs.modalSbscr.classList.toggle('is-hidden');
   }
